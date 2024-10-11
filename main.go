@@ -18,13 +18,12 @@ func main() {
 	}
 	i = strings.TrimSpace(i)                //줄바꿈 제거
 	score, _ := strconv.ParseInt(i, 10, 32) //정수형 10진수 변환
-	if score >= 60 {
-		fmt.Println("A")
-		//status := "passing"
+	var grade string
+	if score >= 90 {
+		grade = "A"
 
 	} else {
-		//status := "failing"
-		fmt.Println("bcdf")
+		grade = "BCDF"
 	}
-
+	fmt.Printf("%d점은 %s등급 입니다.\n", score, grade)
 }
